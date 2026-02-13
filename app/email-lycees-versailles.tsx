@@ -20,7 +20,7 @@ export default function EmailLyceesVersailles() {
         data={filterEmailLyceesVersailles()}
         renderItem={({ item }) => (
           <View>
-            <Text style={styles.listItem}>{item.nom_etablissement}: {item.mail}</Text>
+            <Text style={styles.listItem}>{item.nom_etablissement} :{"\n"}{item.mail}</Text>
           </View>
         )}
       />
