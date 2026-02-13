@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, Pressable, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../constants/theme';
 
 import data from '../assets/lycees-donnees-generales-v1.json';
@@ -13,7 +14,7 @@ export default function EmailLyceesVersailles() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Les adresses mail des lycée de l'académie de Versailles</Text>
       <FlatList
         data={filterEmailLyceesVersailles()}
@@ -27,6 +28,6 @@ export default function EmailLyceesVersailles() {
         <Text style={styles.blueButton}>Retour</Text>
       </Pressable>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }

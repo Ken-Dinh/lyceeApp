@@ -1,6 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { Pressable, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../constants/theme';
 
 import data from '../assets/lycees-donnees-generales-v1.json';
@@ -13,7 +14,7 @@ export default function TypesLycees() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Le nombre de chaque type de lycéee</Text>
       <Text style={styles.listItem}>LP: {filterNombreLycees("LP")}</Text>
       <Text style={styles.listItem}>PR: {filterNombreLycees("PR")}</Text>
@@ -23,6 +24,6 @@ export default function TypesLycees() {
         <Text style={styles.blueButton}>Retour</Text>
       </Pressable>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }

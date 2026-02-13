@@ -1,6 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, FlatList, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { FlatList, Pressable, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../constants/theme';
 
 import data from '../assets/lycees-donnees-generales-v1.json';
@@ -13,7 +14,7 @@ export default function LyceesPrivesParis() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Liste des lycées privés de la région parisienne</Text>
       <FlatList
         data={filterLyceesPrivesParis()}
@@ -27,6 +28,6 @@ export default function LyceesPrivesParis() {
         <Text style={styles.blueButton}>Retour</Text>
       </Pressable>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
