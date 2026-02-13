@@ -6,16 +6,18 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
+    padding: 20,
   },
   blueButton: {
     backgroundColor: 'blue',
     padding: 10,
-    marginTop: 20,
+    marginVertical: 10,
     borderRadius: 5,
     color: 'white',
     alignItems: 'center',
@@ -23,6 +25,7 @@ export const styles = StyleSheet.create({
   },
   listItem: {
     fontSize: 20,
+    padding: 10,
     marginVertical: 5,
     textAlign: 'center',
     backgroundColor: '#acebf8',

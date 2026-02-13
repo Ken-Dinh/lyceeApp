@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { Pressable, Text, View } from 'react-native';
 import { styles } from '../constants/theme';
 
 import data from '../assets/lycees-donnees-generales-v1.json';
